@@ -9,9 +9,9 @@ public enum Plan {
 
 
     private String name;
-    private double price;
+    private int price;
 
-    Plan(String name,double price){
+    Plan(String name,int price){
     this.name=name;
     this.price=price;
     }
@@ -20,14 +20,14 @@ public enum Plan {
         return name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
     public void setName(String name) {
         this.name = name;
     }
-    public void setPrice(double price){
+    public void setPrice(int price){
         this.price=price;
     }
 
@@ -45,5 +45,13 @@ public enum Plan {
 
     public static Plan getPlatinium(){
         return PLATINIUM;
+    }
+
+    @Override
+    public String toString() {
+        return "Plan{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
